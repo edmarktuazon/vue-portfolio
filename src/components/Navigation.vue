@@ -40,7 +40,16 @@ export default {
 
 <template>
   <header
-    class="header bg-primary lg:w-[80%] w-[90%] rounded-full fixed top-6 left-2/4"
+    class="
+      header
+      bg-primary
+      lg:w-[80%]
+      w-[90%]
+      rounded-full
+      fixed
+      top-6
+      left-2/4
+    "
   >
     <nav class="px-8 xl:px-36">
       <div class="flex justify-between items-center py-6 lg:mx-0">
@@ -49,7 +58,7 @@ export default {
         </a>
 
         <ul
-          class="nav-menu hidden md:flex items-center font-poppins"
+          class="nav-menu hidden md:flex gap-8 items-center font-poppins"
           id="nav-menus"
         >
           <a
@@ -57,14 +66,27 @@ export default {
             v-for="data in sourceData.navigation_links"
             :key="data.id"
             :to="`${data.path}`"
-            class="nav-links font-bold text-secondary mr-8 hover:text-white ease-out duration-300"
+            class="
+              nav-links
+              font-bold
+              text-secondary
+              hover:text-white
+              ease-out
+              duration-300
+            "
           >
             {{ data.name }}
           </a>
         </ul>
         <!-- hamburger-->
         <div
-          class="md:hidden hamburger-menu mobile-menu-button cursor-pointer z-50"
+          class="
+            md:hidden
+            hamburger-menu
+            mobile-menu-button
+            cursor-pointer
+            z-50
+          "
           @click="toggleMenu()"
         >
           <span class="block mx-0 bg-secondary h-[3px] w-7 rounded-full"></span>
