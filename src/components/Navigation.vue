@@ -112,7 +112,7 @@ export default {
     justify-content: center;
     flex-direction: column;
     row-gap: 56px;
-    top: 50px;
+    top: 0px;
     left: 0;
     right: 0;
     bottom: 0;
