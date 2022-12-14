@@ -5,8 +5,8 @@ import logo from "../assets/images/logo.png";
 const navLinks = reactive({
   home: "Home",
   about: "About",
-  portfolio: "Portfolio",
-  certificate: "Certificate",
+  portfolio: "Portfolios",
+  certificate: "Certificates",
   contact: "Contact",
 });
 const { home, about, portfolio, certificate, contact } = toRefs(navLinks);

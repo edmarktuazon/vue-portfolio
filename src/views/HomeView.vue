@@ -59,7 +59,6 @@ useMotion(targetEl, {
           font-poppins font-semibold
           text-white text-center
           tracking-wide
-          text-2xl
         "
         v-motion
         :initial="{ opacity: 0, y: 100 }"
@@ -88,21 +87,24 @@ useMotion(targetEl, {
 </template>
 <style scoped>
 .heading-h1 {
-  font-size: clamp(3.125rem, 1.7457rem + 6.8966vw, 5.625rem);
+  font-size: clamp(2.25rem, 0.3231rem + 7.2034vw, 4.375rem);
   line-height: 1.1;
+}
+.heading-h4 {
+  font-size: clamp(1.25rem, 1.0233rem + 0.8475vw, 1.5rem);
 }
 
 .icons-container::after {
   content: "";
   display: block;
-  width: 200px;
+  max-width: 500px;
   height: 1px;
   background-color: rgb(32, 32, 32);
 }
 .icons-container::before {
   content: "";
   display: block;
-  width: 200px;
+
   height: 1px;
   background-color: rgb(32, 32, 32);
 }
