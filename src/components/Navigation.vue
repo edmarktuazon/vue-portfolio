@@ -1,41 +1,20 @@
 <script setup>
+import { reactive, toRefs } from "vue";
 import logo from "../assets/images/logo.png";
 
-const sourceData = {
-  navigation_links: [
-    {
-      id: 1,
-      name: "Home",
-    },
-    {
-      id: 2,
-      name: "About",
-    },
-    {
-      id: 3,
-      name: "Portfolio",
-    },
-    {
-      id: 3,
-      name: "Certificate",
-    },
-    {
-      id: 4,
-      name: "Contact",
-    },
-  ],
-};
-</script>
+const navLinks = reactive({
+  home: "Home",
+  about: "About",
+  portfolio: "Portfolio",
+  certificate: "Certificate",
+  contact: "Contact",
+});
+const { home, about, portfolio, certificate, contact } = toRefs(navLinks);
 
-<script>
-export default {
-  methods: {
-    toggleMenu() {
-      const navMenu = document.getElementById("nav-menus");
-      navMenu.classList.toggle("isShow");
-    },
-  },
-};
+function toggleMenu() {
+  const navMenu = document.getElementById("nav-menus");
+  navMenu.classList.toggle("isShow");
+}
 </script>
 
 <template>
@@ -49,6 +28,7 @@ export default {
       fixed
       top-6
       left-2/4
+      z-50
     "
   >
     <nav class="px-8 xl:px-36">
@@ -61,22 +41,81 @@ export default {
           class="nav-menu hidden md:flex gap-8 items-center font-poppins"
           id="nav-menus"
         >
-          <a
-            href="#"
-            v-for="data in sourceData.navigation_links"
-            :key="data.id"
-            :to="`${data.path}`"
-            class="
-              nav-links
-              font-bold
-              text-secondary
-              hover:text-white
-              ease-out
-              duration-300
-            "
-          >
-            {{ data.name }}
-          </a>
+          <li>
+            <a
+              href="#"
+              class="
+                nav-links
+                font-medium
+                text-secondary
+                hover:text-white
+                ease-out
+                duration-300
+                tracking-wide
+              "
+              >{{ home }}</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="
+                nav-links
+                font-medium
+                text-secondary
+                hover:text-white
+                ease-out
+                duration-300
+                tracking-wide
+              "
+              >{{ about }}</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="
+                nav-links
+                font-medium
+                text-secondary
+                hover:text-white
+                ease-out
+                duration-300
+                tracking-wide
+              "
+              >{{ portfolio }}</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="
+                nav-links
+                font-medium
+                text-secondary
+                hover:text-white
+                ease-out
+                duration-300
+                tracking-wide
+              "
+              >{{ certificate }}</a
+            >
+          </li>
+          <li>
+            <a
+              href="mailto:edmarktuazon03@gmail.com"
+              class="
+                nav-links
+                font-medium
+                text-secondary
+                hover:text-white
+                ease-out
+                duration-300
+                tracking-wide
+              "
+              >{{ contact }}</a
+            >
+          </li>
         </ul>
         <!-- hamburger-->
         <div

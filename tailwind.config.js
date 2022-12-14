@@ -11,7 +11,7 @@ module.exports = {
         backupPrimary: "#161719",
         secondary: "#aaaaaa",
         backupSecondary: "#28292c",
-        highLight: "#DC2626",
+        red: "#DC2626",
       },
     },
   },

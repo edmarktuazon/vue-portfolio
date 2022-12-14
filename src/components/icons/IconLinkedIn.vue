@@ -3,8 +3,8 @@
     xmlns="http://www.w3.org/2000/svg"
     x="0px"
     y="0px"
-    width="40"
-    height="40"
+    width="44"
+    height="44"
     viewBox="0 0 50 50"
     fill="#ffffff"
   >
