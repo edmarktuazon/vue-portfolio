@@ -20,7 +20,7 @@ useMotion(targetEl, {
   <section
     class="bg-backupPrimary h-screen flex justify-center items-center flex-col"
   >
-    <div class="px-8">
+    <div class="px-4">
       <h4
         class="
           text-white text-center
@@ -69,7 +69,9 @@ useMotion(targetEl, {
         I' am a Frontend Software Developer
       </h4>
     </div>
-    <div class="icons-container flex justify-center items-center gap-3 mt-12">
+    <div
+      class="icons-container flex justify-center items-center gap-3 mt-12 px-4"
+    >
       <a href="https://www.facebook.com/edmark.io/" target="_blank">
         <FacebookIcon />
       </a>
@@ -93,18 +95,20 @@ useMotion(targetEl, {
 .heading-h4 {
   font-size: clamp(1.25rem, 1.0233rem + 0.8475vw, 1.5rem);
 }
-
+.icons-container {
+  width: 100%;
+}
 .icons-container::after {
   content: "";
   display: block;
-  max-width: 500px;
+  width: 150px;
   height: 1px;
   background-color: rgb(32, 32, 32);
 }
 .icons-container::before {
   content: "";
   display: block;
-
+  width: 150px;
   height: 1px;
   background-color: rgb(32, 32, 32);
 }
