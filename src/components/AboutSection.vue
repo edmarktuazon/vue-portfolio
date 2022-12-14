@@ -36,19 +36,8 @@ import EdmarkImg from "../assets/images/me.jpg";
         >
           ABOUT
         </h1>
-        <div class="sm:p-5 p-0">
-          <h2
-            class="
-              text-2xl
-              sm:text-4xl
-              font-poppins
-              text-white
-              my-8
-              ml-6
-              sm:my-8 sm:ml-0
-              relative
-            "
-          >
+        <div class="p-5 ml-0 my-2 sm:my-8 sm:ml-4">
+          <h2 class="text-2xl sm:text-4xl font-poppins text-white relative">
             What about me?
           </h2>
         </div>
