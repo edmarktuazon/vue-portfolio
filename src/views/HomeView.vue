@@ -8,11 +8,26 @@ import LinkedInIcon from "../components/icons/IconLinkedIn.vue";
 import { useMotion } from "@vueuse/motion";
 import { ref } from "vue";
 
-const targetEl = ref();
+const targetEl_h3 = ref();
+const targetEl_h1 = ref();
+const targetEl_h4 = ref();
 
-useMotion(targetEl, {
+useMotion(targetEl_h1, {
   initial: { opacity: 0, y: 100 },
-  visibleOnce: { opacity: 1, y: 0 },
+  enter: { opacity: 1, y: 0, scale: 1, transition: { delay: 900 } },
+  variants: { custom: { scale: 2 } },
+});
+
+useMotion(targetEl_h3, {
+  initial: { opacity: 0, y: 100 },
+  enter: { opacity: 1, y: 0, scale: 1, transition: { delay: 900 } },
+  variants: { custom: { scale: 2 } },
+});
+
+useMotion(targetEl_h4, {
+  initial: { opacity: 0, y: 100 },
+  enter: { opacity: 1, y: 0, scale: 1, transition: { delay: 500 } },
+  variants: { custom: { scale: 2 } },
 });
 </script>
 
@@ -29,11 +44,7 @@ useMotion(targetEl, {
           text-xl
           font-medium
         "
-        v-motion
-        :initial="{ opacity: 0, y: 100 }"
-        :enter="{ opacity: 1, y: 0, scale: 1 }"
-        :variants="{ custom: { scale: 2 } }"
-        :delay="500"
+        ref="targetEl_h4"
       >
         Greetings! I'm
       </h4>
@@ -44,33 +55,26 @@ useMotion(targetEl, {
           text-red text-center
           my-2
           tracking-wide
+          v-motion-fade
         "
-        v-motion
-        :initial="{ opacity: 0, y: 100 }"
-        :enter="{ opacity: 1, y: 0, scale: 1 }"
-        :variants="{ custom: { scale: 2 } }"
-        :delay="900"
+        ref="targetEl_h1"
       >
         Edmark Tuazon.
       </h1>
-      <h4
+      <h3
         class="
-          heading-h4
+          heading-h3
           font-poppins font-semibold
           text-white text-center
           tracking-wide
         "
-        v-motion
-        :initial="{ opacity: 0, y: 100 }"
-        :enter="{ opacity: 1, y: 0, scale: 1 }"
-        :variants="{ custom: { scale: 2 } }"
-        :delay="900"
+        ref="targetEl_h3"
       >
         I' am a Frontend Software Developer
-      </h4>
+      </h3>
     </div>
     <div
-      class="icons-container flex justify-center items-center gap-3 mt-12 px-4"
+      class="icons-container flex justify-center items-center gap-3 mt-16 px-4"
     >
       <a href="https://www.facebook.com/edmark.io/" target="_blank">
         <FacebookIcon />
@@ -92,7 +96,7 @@ useMotion(targetEl, {
   font-size: clamp(2.25rem, 0.3231rem + 7.2034vw, 4.375rem);
   line-height: 1.1;
 }
-.heading-h4 {
+.heading-h3 {
   font-size: clamp(1.25rem, 1.0233rem + 0.8475vw, 1.5rem);
 }
 .icons-container {
