@@ -62,15 +62,10 @@ useMotion(targetEl_h4, {
         Edmark Tuazon.
       </h1>
       <h3
-        class="
-          heading-h3
-          font-poppins font-semibold
-          text-white text-center
-          tracking-wide
-        "
+        class="heading-h3 font-poppins text-white text-center tracking-wide"
         ref="targetEl_h3"
       >
-        I' am a Frontend Software Developer
+        I' am a Frontend Web Developer
       </h3>
     </div>
     <div

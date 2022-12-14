@@ -47,8 +47,8 @@ function toggleMenu() {
               class="
                 nav-links
                 font-medium
-                text-secondary
-                hover:text-white
+                text-white
+                hover:text-red
                 ease-out
                 duration-300
                 tracking-wide
@@ -62,8 +62,8 @@ function toggleMenu() {
               class="
                 nav-links
                 font-medium
-                text-secondary
-                hover:text-white
+                text-white
+                hover:text-red
                 ease-out
                 duration-300
                 tracking-wide
@@ -77,8 +77,8 @@ function toggleMenu() {
               class="
                 nav-links
                 font-medium
-                text-secondary
-                hover:text-white
+                text-white
+                hover:text-red
                 ease-out
                 duration-300
                 tracking-wide
@@ -92,8 +92,8 @@ function toggleMenu() {
               class="
                 nav-links
                 font-medium
-                text-secondary
-                hover:text-white
+                text-white
+                hover:text-red
                 ease-out
                 duration-300
                 tracking-wide
@@ -107,8 +107,8 @@ function toggleMenu() {
               class="
                 nav-links
                 font-medium
-                text-secondary
-                hover:text-white
+                text-white
+                hover:text-red
                 ease-out
                 duration-300
                 tracking-wide
