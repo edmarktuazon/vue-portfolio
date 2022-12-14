@@ -43,8 +43,9 @@ import EdmarkImg from "../assets/images/me.jpg";
               sm:text-4xl
               font-poppins
               text-white
-              my-6
-              sm:my-8
+              my-8
+              ml-6
+              sm:my-8 sm:ml-0
               relative
             "
           >
@@ -81,6 +82,6 @@ import EdmarkImg from "../assets/images/me.jpg";
 
 <style scoped>
 .heading-h1 {
-  font-size: clamp(4.375rem, -0.1563rem + 14.5vw, 8rem);
+  font-size: clamp(4.6875rem, 2.3214rem + 10.0952vw, 8rem);
 }
 </style>
