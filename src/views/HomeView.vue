@@ -88,7 +88,7 @@ useMotion(targetEl_h4, {
 </template>
 <style scoped>
 .heading-h1 {
-  font-size: clamp(2.65rem, 0.3231rem + 7.2034vw, 4.375rem);
+  font-size: clamp(2.5rem, 0.3231rem + 7.2034vw, 4.375rem);
   line-height: 1.1;
 }
 .heading-h3 {
