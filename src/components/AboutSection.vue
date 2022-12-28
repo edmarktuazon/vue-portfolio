@@ -9,7 +9,7 @@ import EdmarkImg from "../assets/images/me.jpg";
         gap-5
         w-full
         md:px-0
-        px-4
+        px-8
         md:w-4/5
         grid-cols-1
         lg:grid-cols-2
