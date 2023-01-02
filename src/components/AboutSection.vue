@@ -1,8 +1,21 @@
 <script setup>
-import EdmarkImg from "../assets/images/me.jpg";
+import EdmarkImg from "../assets/images/ed.jpg";
+
+import { useMotion } from "@vueuse/motion";
+import { ref } from "vue";
+
+const targetEl_ul = ref();
+
+useMotion(targetEl_ul, {
+  visible: {
+    scale: 1,
+    opacity: 1,
+    y: 0,
+  },
+});
 </script>
 <template>
-  <section class="bg-backupPrimary pb-12">
+  <section class="bg-backupPrimary py-24 min-h-screen">
     <div
       class="
         grid
@@ -12,57 +25,96 @@ import EdmarkImg from "../assets/images/me.jpg";
         px-8
         md:w-4/5
         grid-cols-1
-        lg:grid-cols-2
+        lg:grid-cols-3
         m-auto
       "
     >
-      <figure class="place-items-center m-auto lg:grid hidden">
+      <figure class="place-items-center m-auto grid">
         <img
           :src="EdmarkImg"
           alt="edmark image"
-          class="h-[300px] object-cover max-w-[300px] w-full"
+          class="h-[300px] object-cover max-w-[300px] w-full rounded-lg"
         />
-      </figure>
-      <div class="relative">
-        <h1
+        <a
+          href="../assets/docs/Dev_Ed.pdf"
+          target="_blank"
           class="
-            heading-h1
+            text-lightGray
+            border
+            font-poppins
+            p-2
+            rounded-lg
+            w-44
+            mt-8
+            text-center
+            hover:bg-backupSecondary hover:text-white
+          "
+        >
+          <font-awesome-icon icon="fa-solid fa-file" /> &nbsp; View Resume
+        </a>
+      </figure>
+      <div class="relative mt-12 lg:mt-0 col-span-2">
+        <h2
+          class="
+            heading-h2
             absolute
             text-backupSecondary
-            font-extrabold
+            font-black
             text-9xl
             tracking-wider
           "
         >
           ABOUT
-        </h1>
+        </h2>
         <div class="p-5 ml-0 my-2 sm:my-8 sm:ml-4">
           <h2 class="text-2xl sm:text-4xl font-poppins text-white relative">
             What about me?
           </h2>
         </div>
-        <p class="font-poppins text-white my-5">
-          A self-taught Software Developer focused on Frontend, able to develop
-          Responsive, Intuitive and User-Friendly Websites using the latest
-          Frontend Technologies.
+        <p class="font-poppins text-lightGray my-5 leading-7">
+          A self-taught Software Developer focused on Frontend, I'm based in
+          Cavite Philippines I' am able to develop Responsive, Intuitive and
+          User-Friendly Websites using the latest Frontend Technologies.
         </p>
-        <h3 class="text-2xl font-bold text-red">My tech stacks:</h3>
+        <h3 class="text-2xl font-bold text-red capitalize">my tech stacks:</h3>
         <ul
-          class="grid grid-cols-2 md:grid-cols-3 text-white font-poppins mt-5"
+          class="
+            grid grid-cols-2
+            md:grid-cols-3
+            text-lightGray
+            font-poppins
+            mt-5
+            leading-7
+          "
+          ref="targetEl_ul"
         >
-          <li>HTML</li>
-          <li>CSS3</li>
-          <li>SASS, SCSS</li>
-          <li>TailwindCSS</li>
-          <li>Bootstrap</li>
-          <li>JavaScript</li>
-          <li>Basic jQuery</li>
-          <li>Vue.js</li>
-          <li>Familiarity in PHP</li>
-          <li>Git</li>
-          <li>GitHub</li>
-          <li>Figma Software</li>
-          <li>Adobe XD</li>
+          <li><font-awesome-icon icon="check" class="text-red" /> HTML</li>
+          <li><font-awesome-icon icon="check" class="text-red" /> CSS3</li>
+          <li><font-awesome-icon icon="check" class="text-red" /> SASS/SCSS</li>
+          <li>
+            <font-awesome-icon icon="check" class="text-red" /> TailwindCSS
+          </li>
+          <li>
+            <font-awesome-icon icon="check" class="text-red" /> Bootstrap 4/5
+          </li>
+          <li>
+            <font-awesome-icon icon="check" class="text-red" /> JavaScript
+          </li>
+          <li>
+            <font-awesome-icon icon="check" class="text-red" /> Basic jQuery
+          </li>
+          <li><font-awesome-icon icon="check" class="text-red" /> Pug.js</li>
+          <li><font-awesome-icon icon="check" class="text-red" /> Vue.js</li>
+          <li>
+            <font-awesome-icon icon="check" class="text-red" /> Familiarity in
+            PHP
+          </li>
+          <li><font-awesome-icon icon="check" class="text-red" /> Git</li>
+          <li><font-awesome-icon icon="check" class="text-red" /> GitHub</li>
+          <li>
+            <font-awesome-icon icon="check" class="text-red" /> Figma Software
+          </li>
+          <li><font-awesome-icon icon="check" class="text-red" /> Adobe XD</li>
         </ul>
       </div>
     </div>
@@ -70,7 +122,7 @@ import EdmarkImg from "../assets/images/me.jpg";
 </template>
 
 <style scoped>
-.heading-h1 {
+.heading-h2 {
   font-size: clamp(4.6875rem, 2.3214rem + 10.0952vw, 8rem);
 }
 </style>

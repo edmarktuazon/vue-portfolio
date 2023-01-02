@@ -88,7 +88,8 @@ function toggleMenu() {
           </li>
           <li>
             <a
-              href="#"
+              href="../assets/images/OJT-Cert_Tuazon-Edmark.png"
+              target="_blank"
               class="
                 nav-links
                 font-medium

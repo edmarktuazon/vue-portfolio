@@ -33,12 +33,19 @@ useMotion(targetEl_h4, {
 
 <template>
   <section
-    class="bg-backupPrimary h-screen flex justify-center items-center flex-col"
+    class="
+      bg-backupPrimary
+      min-h-screen
+      flex
+      justify-center
+      items-center
+      flex-col
+    "
   >
     <div class="px-4">
       <h4
         class="
-          text-white text-center
+          text-lightGray text-center
           font-poppins
           tracking-wide
           text-xl
@@ -62,27 +69,28 @@ useMotion(targetEl_h4, {
         Edmark Tuazon.
       </h1>
       <h3
-        class="heading-h3 font-poppins text-white text-center tracking-wide"
+        class="heading-h3 font-poppins text-lightGray text-center tracking-wide"
         ref="targetEl_h3"
       >
         I' am a Frontend Web Developer
       </h3>
     </div>
-    <div
-      class="icons-container flex justify-center items-center gap-3 mt-16 px-4"
-    >
-      <a href="https://www.facebook.com/edmark.io/" target="_blank">
-        <FacebookIcon />
-      </a>
-      <a href="https://www.instagram.com/edmark.io/" target="_blank">
-        <InstagramIcon />
-      </a>
-      <a href="https://www.linkedin.com/in/edmarktuazon/" target="_blank">
-        <LinkedInIcon />
-      </a>
-      <a href="https://github.com/edmarktuazon" target="_blank">
-        <GitHubIcon />
-      </a>
+    <div class="mt-16 px-4">
+      <h3 class="text-center text-red font-poppins mb-2">Connect with me</h3>
+      <div class="icons-container flex justify-center items-center gap-3">
+        <a href="https://www.facebook.com/edmark.io/" target="_blank">
+          <FacebookIcon />
+        </a>
+        <a href="https://www.instagram.com/edmark.io/" target="_blank">
+          <InstagramIcon />
+        </a>
+        <a href="https://www.linkedin.com/in/edmarktuazon/" target="_blank">
+          <LinkedInIcon />
+        </a>
+        <a href="https://github.com/edmarktuazon" target="_blank">
+          <GitHubIcon />
+        </a>
+      </div>
     </div>
   </section>
 </template>
