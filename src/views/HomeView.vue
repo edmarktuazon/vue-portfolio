@@ -108,14 +108,16 @@ useMotion(targetEl_h4, {
 .icons-container::after {
   content: "";
   display: block;
-  width: 150px;
+  max-width: 150px;
+  width: 100%;
   height: 1px;
   background-color: rgb(32, 32, 32);
 }
 .icons-container::before {
   content: "";
   display: block;
-  width: 150px;
+  max-width: 150px;
+  width: 100%;
   height: 1px;
   background-color: rgb(32, 32, 32);
 }

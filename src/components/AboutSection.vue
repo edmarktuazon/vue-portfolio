@@ -72,9 +72,10 @@ useMotion(targetEl_ul, {
           </h2>
         </div>
         <p class="font-poppins text-lightGray my-5 leading-7">
-          A self-taught Software Developer focused on Frontend, I'm based in
-          Cavite Philippines I' am able to develop Responsive, Intuitive and
-          User-Friendly Websites using the latest Frontend Technologies.
+          A self-taught Software Developer focused on Frontend,
+          <span class="text-red">I'm based in Cavite Philippines</span>, I' am
+          able to develop Responsive, Intuitive and User-Friendly Websites using
+          the latest Frontend Technologies.
         </p>
         <h3 class="text-2xl font-bold text-red capitalize">my tech stacks:</h3>
         <ul

@@ -9,7 +9,7 @@ import ORSiteImg from "../assets/images/OR-site.png";
         class="
           text-lightGray
           font-poppins
-          text-2xl
+          text-xl
           tracking-widest
           uppercase
           mb-4
@@ -29,10 +29,10 @@ import ORSiteImg from "../assets/images/OR-site.png";
         lg:grid-cols-2
         mx-auto
         w-full
-        px-8
-        lg:px-0 lg:w-4/5
+        md:w-4/5
         relative
-        gap-10
+        md:gap-10
+        gap-0
       "
     >
       <a href="https://olivia-rodrigo-site-cloned.vercel.app/" target="_blank">
