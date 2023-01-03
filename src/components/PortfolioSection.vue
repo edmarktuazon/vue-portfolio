@@ -120,7 +120,7 @@ useMotion(targetEl_infoSecond, {
         >
           <img
             :src="iccSiteImg"
-            alt="ICC home screen capture  "
+            alt="ICC banner screen capture  "
             class="w-full"
           />
         </a>
