@@ -4,14 +4,21 @@ import EdmarkImg from "../assets/images/ed.jpg";
 import { useMotion } from "@vueuse/motion";
 import { ref } from "vue";
 
+const targetEl_info = ref();
 const targetEl_ul = ref();
 
+useMotion(targetEl_info, {
+  initial: { opacity: 0, y: 100 },
+  enter: { opacity: 1, y: 0, scale: 1, transition: { duration: 1000 } },
+  variants: { custom: { scale: 2 } },
+  visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 1000 } },
+});
+
 useMotion(targetEl_ul, {
-  visible: {
-    scale: 1,
-    opacity: 1,
-    y: 0,
-  },
+  initial: { opacity: 0, y: 100 },
+  enter: { opacity: 1, y: 0, scale: 1, transition: { duration: 1200 } },
+  variants: { custom: { scale: 2 } },
+  visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 1200 } },
 });
 </script>
 <template>
@@ -40,17 +47,17 @@ useMotion(targetEl_ul, {
           target="_blank"
           class="
             text-lightGray
-            border
+            border border-lightGray
             font-poppins
             p-2
             rounded-lg
-            w-44
+            w-52
             mt-8
             text-center
             hover:bg-backupSecondary hover:text-white
           "
         >
-          <font-awesome-icon icon="fa-solid fa-file" /> &nbsp; View Resume
+          <font-awesome-icon icon="fa-solid fa-file" /> &nbsp; View my resume
         </a>
       </figure>
       <div class="relative mt-12 lg:mt-0 col-span-2">
@@ -71,14 +78,19 @@ useMotion(targetEl_ul, {
             What about me?
           </h2>
         </div>
-        <p class="font-poppins text-lightGray my-5 leading-7">
-          A self-taught Software Developer focused on Frontend,
-          <span class="text-red">I'm based in Cavite Philippines</span>, I' am
-          able to develop Responsive, Intuitive and User-Friendly Websites using
-          the latest Frontend Technologies.
+        <p
+          class="font-poppins text-lightGray my-5 leading-7"
+          ref="targetEl_info"
+        >
+          A self-taught Software Developer<span class="text-lightBlue">
+            base in Cavite Philippines</span
+          >, that focused on Frontend side of a Web, I'm also able to develop
+          Responsive, Intuitive and User-Friendly Websites using the latest
+          Frontend Technologies.
         </p>
-        <h3 class="text-2xl font-bold text-red capitalize">my tech stacks:</h3>
+        <h3 class="text-2xl font-bold text-gray capitalize">my tech stacks:</h3>
         <ul
+          ref="targetEl_ul"
           class="
             grid grid-cols-2
             md:grid-cols-3
@@ -87,35 +99,52 @@ useMotion(targetEl_ul, {
             mt-5
             leading-7
           "
-          ref="targetEl_ul"
         >
-          <li><font-awesome-icon icon="check" class="text-red" /> HTML</li>
-          <li><font-awesome-icon icon="check" class="text-red" /> CSS3</li>
-          <li><font-awesome-icon icon="check" class="text-red" /> SASS/SCSS</li>
           <li>
-            <font-awesome-icon icon="check" class="text-red" /> TailwindCSS
+            <font-awesome-icon icon="check" class="text-lightBlue" /> HTML
           </li>
           <li>
-            <font-awesome-icon icon="check" class="text-red" /> Bootstrap 4/5
+            <font-awesome-icon icon="check" class="text-lightBlue" /> CSS3
           </li>
           <li>
-            <font-awesome-icon icon="check" class="text-red" /> JavaScript
+            <font-awesome-icon icon="check" class="text-lightBlue" /> SASS/SCSS
           </li>
           <li>
-            <font-awesome-icon icon="check" class="text-red" /> Basic jQuery
+            <font-awesome-icon icon="check" class="text-lightBlue" />
+            TailwindCSS
           </li>
-          <li><font-awesome-icon icon="check" class="text-red" /> Pug.js</li>
-          <li><font-awesome-icon icon="check" class="text-red" /> Vue.js</li>
           <li>
-            <font-awesome-icon icon="check" class="text-red" /> Familiarity in
-            PHP
+            <font-awesome-icon icon="check" class="text-lightBlue" /> Bootstrap
+            4/5
           </li>
-          <li><font-awesome-icon icon="check" class="text-red" /> Git</li>
-          <li><font-awesome-icon icon="check" class="text-red" /> GitHub</li>
           <li>
-            <font-awesome-icon icon="check" class="text-red" /> Figma Software
+            <font-awesome-icon icon="check" class="text-lightBlue" /> JavaScript
           </li>
-          <li><font-awesome-icon icon="check" class="text-red" /> Adobe XD</li>
+          <li>
+            <font-awesome-icon icon="check" class="text-lightBlue" /> Basic
+            jQuery
+          </li>
+          <li>
+            <font-awesome-icon icon="check" class="text-lightBlue" /> Pug.js
+          </li>
+          <li>
+            <font-awesome-icon icon="check" class="text-lightBlue" /> Vue.js
+          </li>
+          <li>
+            <font-awesome-icon icon="check" class="text-lightBlue" />
+            Familiarity in PHP
+          </li>
+          <li><font-awesome-icon icon="check" class="text-lightBlue" /> Git</li>
+          <li>
+            <font-awesome-icon icon="check" class="text-lightBlue" /> GitHub
+          </li>
+          <li>
+            <font-awesome-icon icon="check" class="text-lightBlue" /> Figma
+            Software
+          </li>
+          <li>
+            <font-awesome-icon icon="check" class="text-lightBlue" /> Adobe XD
+          </li>
         </ul>
       </div>
     </div>

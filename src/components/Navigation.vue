@@ -1,6 +1,5 @@
 <script setup>
 import { reactive, toRefs } from "vue";
-import logo from "../assets/images/logo.png";
 
 const navLinks = reactive({
   home: "Home",
@@ -34,7 +33,9 @@ function toggleMenu() {
     <nav class="px-8 xl:px-36">
       <div class="flex justify-between items-center py-6 lg:mx-0">
         <a href="/" class="z-50">
-          <img :src="logo" alt="logo-web" />
+          <span class="text-lightBlue font-bold text-2xl font-poppins"
+            >Edmark.</span
+          >
         </a>
 
         <ul
@@ -47,8 +48,8 @@ function toggleMenu() {
               class="
                 nav-links
                 font-medium
-                text-white
-                hover:text-red
+                text-gray
+                hover:text-lightBlue
                 ease-out
                 duration-300
                 tracking-wide
@@ -62,8 +63,8 @@ function toggleMenu() {
               class="
                 nav-links
                 font-medium
-                text-white
-                hover:text-red
+                text-gray
+                hover:text-lightBlue
                 ease-out
                 duration-300
                 tracking-wide
@@ -77,8 +78,8 @@ function toggleMenu() {
               class="
                 nav-links
                 font-medium
-                text-white
-                hover:text-red
+                text-gray
+                hover:text-lightBlue
                 ease-out
                 duration-300
                 tracking-wide
@@ -93,8 +94,8 @@ function toggleMenu() {
               class="
                 nav-links
                 font-medium
-                text-white
-                hover:text-red
+                text-gray
+                hover:text-lightBlue
                 ease-out
                 duration-300
                 tracking-wide
@@ -108,8 +109,8 @@ function toggleMenu() {
               class="
                 nav-links
                 font-medium
-                text-white
-                hover:text-red
+                text-gray
+                hover:text-lightBlue
                 ease-out
                 duration-300
                 tracking-wide

@@ -8,25 +8,11 @@ import LinkedInIcon from "../components/icons/IconLinkedIn.vue";
 import { useMotion } from "@vueuse/motion";
 import { ref } from "vue";
 
-const targetEl_h3 = ref();
-const targetEl_h1 = ref();
-const targetEl_h4 = ref();
+const targetEl_headings = ref();
 
-useMotion(targetEl_h1, {
+useMotion(targetEl_headings, {
   initial: { opacity: 0, y: 100 },
-  enter: { opacity: 1, y: 0, scale: 1, transition: { delay: 900 } },
-  variants: { custom: { scale: 2 } },
-});
-
-useMotion(targetEl_h3, {
-  initial: { opacity: 0, y: 100 },
-  enter: { opacity: 1, y: 0, scale: 1, transition: { delay: 900 } },
-  variants: { custom: { scale: 2 } },
-});
-
-useMotion(targetEl_h4, {
-  initial: { opacity: 0, y: 100 },
-  enter: { opacity: 1, y: 0, scale: 1, transition: { delay: 500 } },
+  enter: { opacity: 1, y: 0, scale: 1, transition: { duration: 1000 } },
   variants: { custom: { scale: 2 } },
 });
 </script>
@@ -42,7 +28,7 @@ useMotion(targetEl_h4, {
       flex-col
     "
   >
-    <div class="px-4">
+    <div class="px-4" ref="targetEl_headings">
       <h4
         class="
           text-lightGray text-center
@@ -51,7 +37,6 @@ useMotion(targetEl_h4, {
           text-xl
           font-medium
         "
-        ref="targetEl_h4"
       >
         Greetings! I'm
       </h4>
@@ -59,24 +44,22 @@ useMotion(targetEl_h4, {
         class="
           heading-h1
           font-poppins font-bold
-          text-red text-center
+          text-gray text-center
           my-2
           tracking-wide
           v-motion-fade
         "
-        ref="targetEl_h1"
       >
         Edmark Tuazon.
       </h1>
       <h3
         class="heading-h3 font-poppins text-lightGray text-center tracking-wide"
-        ref="targetEl_h3"
       >
         I' am a Frontend Web Developer
       </h3>
     </div>
     <div class="mt-16 px-4">
-      <h3 class="text-center text-red font-poppins mb-2">Connect with me</h3>
+      <h3 class="text-center text-gray font-poppins mb-2">Connect with me</h3>
       <div class="icons-container flex justify-center items-center gap-3">
         <a href="https://www.facebook.com/edmark.io/" target="_blank">
           <FacebookIcon />
@@ -108,16 +91,14 @@ useMotion(targetEl_h4, {
 .icons-container::after {
   content: "";
   display: block;
-  max-width: 150px;
-  width: 100%;
+  width: 150px;
   height: 1px;
   background-color: rgb(32, 32, 32);
 }
 .icons-container::before {
   content: "";
   display: block;
-  max-width: 150px;
-  width: 100%;
+  width: 150px;
   height: 1px;
   background-color: rgb(32, 32, 32);
 }
