@@ -1,6 +1,6 @@
 <script setup>
 import ORSiteImg from "../assets/images/OR-site.png";
-import iccSiteImg from "../assets/images/icc.png";
+import ICCSiteImg from "../assets/images/icc.png";
 
 import { useMotion } from "@vueuse/motion";
 import { ref } from "vue";
@@ -119,7 +119,7 @@ useMotion(targetEl_infoSecond, {
           target="_blank"
         >
           <img
-            :src="iccSiteImg"
+            :src="ICCSiteImg"
             alt="ICC banner screen capture  "
             class="w-full"
           />
