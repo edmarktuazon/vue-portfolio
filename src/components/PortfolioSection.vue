@@ -1,6 +1,5 @@
 <script setup>
 import ORSiteImg from "../assets/images/OR-site.png";
-import ICCSiteImg from "../assets/images/icc.png";
 
 import { useMotion } from "@vueuse/motion";
 import { ref } from "vue";
@@ -118,11 +117,11 @@ useMotion(targetEl_infoSecond, {
           href="https://icc-tmc-branch-2022-edmarktuazon.vercel.app/"
           target="_blank"
         >
-          <img
+          <!-- <img
             :src="ICCSiteImg"
             alt="ICC banner screen capture  "
             class="w-full"
-          />
+          /> -->
         </a>
       </div>
     </div>
