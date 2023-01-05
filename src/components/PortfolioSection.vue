@@ -123,6 +123,9 @@ useMotion(targetEl_infoSecond, {
             <li class="text-[12px] font-poppins text-lightBlue">HTML</li>
             <li class="text-[12px] font-poppins text-lightBlue">SCSS</li>
             <li class="text-[12px] font-poppins text-lightBlue">JavaScript</li>
+            <li class="text-[12px] font-poppins text-lightBlue">
+              Formspree (form backend, API)
+            </li>
           </ul>
         </div>
       </div>
