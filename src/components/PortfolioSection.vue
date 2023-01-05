@@ -1,6 +1,6 @@
 <script setup>
 import ORSiteImg from "../assets/images/OR-site.png";
-import ICCSiteImg from "../assets/images/icc.png";
+import TpSiteImg from "../assets/images/tp.jpg";
 
 import { useMotion } from "@vueuse/motion";
 import { ref } from "vue";
@@ -103,7 +103,7 @@ useMotion(targetEl_infoSecond, {
         <div class="relative left-0 md:left-24">
           <div class="flex justify-start">
             <h4 class="font-poppins text-gray text-xl font-semibold">
-              Imus Computer College Cavite Site
+              TaskPlace
             </h4>
           </div>
           <div class="bg-primary p-4 my-2">
@@ -120,7 +120,8 @@ useMotion(targetEl_infoSecond, {
             </div>
           </div>
           <ul class="flex gap-1 justify-start items-center lg:justify-start">
-            <li class="text-[12px] font-poppins text-lightBlue">Bootstrap 5</li>
+            <li class="text-[12px] font-poppins text-lightBlue">HTML</li>
+            <li class="text-[12px] font-poppins text-lightBlue">SCSS</li>
             <li class="text-[12px] font-poppins text-lightBlue">JavaScript</li>
           </ul>
         </div>
@@ -130,7 +131,7 @@ useMotion(targetEl_infoSecond, {
         target="_blank"
       >
         <img
-          :src="ICCSiteImg"
+          :src="TpSiteImg"
           alt="ICC banner screen capture  "
           class="w-full"
         />
