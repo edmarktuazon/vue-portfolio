@@ -27,7 +27,7 @@ function toggleMenu() {
       fixed
       top-6
       left-2/4
-      z-50
+      z-[999]
     "
   >
     <nav class="px-8 xl:px-36">
