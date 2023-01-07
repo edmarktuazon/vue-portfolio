@@ -6,15 +6,24 @@ import LinkedInIcon from "../components/icons/IconLinkedIn.vue";
 
 // USE MOTION PLUGIN
 import { useMotion } from "@vueuse/motion";
-import { ref } from "vue";
+import { reactive, ref, toRefs } from "vue";
 
 const targetEl_headings = ref();
 
 useMotion(targetEl_headings, {
-  initial: { opacity: 0, y: 100 },
-  enter: { opacity: 1, y: 0, scale: 1, transition: { duration: 1000 } },
+  initial: { opacity: 0, y: 40 },
+  enter: { opacity: 1, y: 0, scale: 1, transition: { duration: 700 } },
   variants: { custom: { scale: 2 } },
 });
+
+const links = reactive({
+  facebook: "https://www.facebook.com/edmark.io/",
+  instagram: "https://www.instagram.com/edmark.ig/",
+  linkedin: "https://www.linkedin.com/in/edmarktuazon/",
+  github: "https://github.com/edmarktuazon",
+});
+
+const { facebook, instagram, linkedin, github } = toRefs(links);
 </script>
 
 <template>
@@ -67,16 +76,16 @@ useMotion(targetEl_headings, {
       <div class="mt-16 px-4">
         <h3 class="text-center text-gray font-poppins mb-2">Connect with me</h3>
         <div class="icons-container flex justify-center items-center gap-3">
-          <a href="https://www.facebook.com/edmark.io/" target="_blank">
+          <a :href="facebook" target="_blank">
             <FacebookIcon />
           </a>
-          <a href="https://www.instagram.com/edmark.ig/" target="_blank">
+          <a :href="instagram" target="_blank">
             <InstagramIcon />
           </a>
-          <a href="https://www.linkedin.com/in/edmarktuazon/" target="_blank">
+          <a :href="linkedin" target="_blank">
             <LinkedInIcon />
           </a>
-          <a href="https://github.com/edmarktuazon" target="_blank">
+          <a :href="github" target="_blank">
             <GitHubIcon />
           </a>
         </div>

@@ -1,6 +1,8 @@
 <script setup>
 import { reactive, toRefs } from "vue";
+import CertImg from "../assets/images/OJT-Cert_Tuazon-Edmark.png";
 
+// dynamic nav links
 const navLinks = reactive({
   home: "Home",
   about: "About",
@@ -10,6 +12,7 @@ const navLinks = reactive({
 });
 const { home, about, portfolio, certificate, contact } = toRefs(navLinks);
 
+// hamburger menu
 function toggleMenu() {
   const navMenu = document.getElementById("nav-menus");
   navMenu.classList.toggle("isShow");
@@ -89,7 +92,7 @@ function toggleMenu() {
           </li>
           <li>
             <a
-              href="../assets/images/OJT-Cert_Tuazon-Edmark.png"
+              :href="CertImg"
               target="_blank"
               class="
                 nav-links
@@ -141,6 +144,10 @@ function toggleMenu() {
   </header>
 </template>
 <style scoped>
+body {
+  scroll-behavior: smooth !important;
+}
+
 .header {
   transform: translate(-50%, 0);
 }

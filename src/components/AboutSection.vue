@@ -4,23 +4,25 @@ import EdmarkImg from "../assets/images/ed.jpg";
 import { useMotion } from "@vueuse/motion";
 import { reactive, ref } from "vue";
 
+// motion
 const targetEl_info = ref();
 const targetEl_ul = ref();
 
 useMotion(targetEl_info, {
-  initial: { opacity: 0, y: 100 },
-  enter: { opacity: 1, y: 0, scale: 1, transition: { duration: 1000 } },
+  initial: { opacity: 0, y: 40 },
+  enter: { opacity: 1, y: 0, scale: 1, transition: { duration: 700 } },
   variants: { custom: { scale: 2 } },
-  visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 1000 } },
+  visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 700 } },
 });
 
 useMotion(targetEl_ul, {
-  initial: { opacity: 0, y: 100 },
-  enter: { opacity: 1, y: 0, scale: 1, transition: { duration: 1200 } },
+  initial: { opacity: 0, y: 40 },
+  enter: { opacity: 1, y: 0, scale: 1, transition: { duration: 900 } },
   variants: { custom: { scale: 2 } },
-  visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 1200 } },
+  visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 900 } },
 });
 
+// dynamic skills list
 const skillList = reactive({
   frontendSkills: [
     {
@@ -174,6 +176,10 @@ const { frontendSkills } = skillList;
 </template>
 
 <style scoped>
+body {
+  scroll-behavior: smooth !important;
+}
+
 .heading-h2 {
   font-size: clamp(4.6875rem, 2.3214rem + 10.0952vw, 8rem);
 }

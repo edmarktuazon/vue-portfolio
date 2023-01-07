@@ -8,6 +8,7 @@ import TpSiteImg from "../assets/images/tp.jpg";
 import { useMotion } from "@vueuse/motion";
 import { ref } from "vue";
 
+// motion
 const targetEl_firstInfo = ref();
 const targetEl_secondInfo = ref();
 const targetEl_thirdInfo = ref();
@@ -15,38 +16,38 @@ const targetEl_fourthInfo = ref();
 const targetEl_fifthInfo = ref();
 
 useMotion(targetEl_firstInfo, {
-  initial: { opacity: 0, y: 100 },
-  enter: { opacity: 1, y: 0, scale: 1, transition: { duration: 1000 } },
+  initial: { opacity: 0, y: 40 },
+  enter: { opacity: 1, y: 0, scale: 1, transition: { duration: 700 } },
   variants: { custom: { scale: 2 } },
-  visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 1000 } },
+  visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 700 } },
 });
 
 useMotion(targetEl_secondInfo, {
-  initial: { opacity: 0, y: 100 },
-  enter: { opacity: 1, y: 0, scale: 1, transition: { duration: 1000 } },
+  initial: { opacity: 0, y: 40 },
+  enter: { opacity: 1, y: 0, scale: 1, transition: { duration: 700 } },
   variants: { custom: { scale: 2 } },
-  visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 1000 } },
+  visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 700 } },
 });
 
 useMotion(targetEl_thirdInfo, {
-  initial: { opacity: 0, y: 100 },
-  enter: { opacity: 1, y: 0, scale: 1, transition: { duration: 1000 } },
+  initial: { opacity: 0, y: 40 },
+  enter: { opacity: 1, y: 0, scale: 1, transition: { duration: 700 } },
   variants: { custom: { scale: 2 } },
-  visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 1000 } },
+  visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 700 } },
 });
 
 useMotion(targetEl_fourthInfo, {
-  initial: { opacity: 0, y: 100 },
-  enter: { opacity: 1, y: 0, scale: 1, transition: { duration: 1000 } },
+  initial: { opacity: 0, y: 40 },
+  enter: { opacity: 1, y: 0, scale: 1, transition: { duration: 700 } },
   variants: { custom: { scale: 2 } },
-  visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 1000 } },
+  visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 700 } },
 });
 
 useMotion(targetEl_fifthInfo, {
-  initial: { opacity: 0, y: 100 },
-  enter: { opacity: 1, y: 0, scale: 1, transition: { duration: 1000 } },
+  initial: { opacity: 0, y: 40 },
+  enter: { opacity: 1, y: 0, scale: 1, transition: { duration: 700 } },
   variants: { custom: { scale: 2 } },
-  visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 1000 } },
+  visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 700 } },
 });
 </script>
 
@@ -97,7 +98,6 @@ useMotion(targetEl_fifthInfo, {
         gap-0
         place-items-center
         z-50
-        relative
       "
     >
       <!-- first portfolio -->
@@ -165,7 +165,11 @@ useMotion(targetEl_fifthInfo, {
         </div>
       </div>
       <div class="folio-captured-img relative">
-        <a href="https://shopweiss.store/finals05/" target="_blank">
+        <a
+          href="https://shopweiss.store/finals05/"
+          target="_blank"
+          v-motion-fade-visible
+        >
           <img
             :src="ShopweissImg"
             alt="Shopweiss banner screen capture  "
@@ -175,7 +179,11 @@ useMotion(targetEl_fifthInfo, {
       </div>
 
       <!-- Second  portfolio -->
-      <a href="https://tala-beta.vercel.app/" target="_blank">
+      <a
+        href="https://tala-beta.vercel.app/"
+        target="_blank"
+        v-motion-fade-visible
+      >
         <img
           :src="TalaImg"
           alt="Talatun banner screen capture  "
@@ -247,7 +255,10 @@ useMotion(targetEl_fifthInfo, {
       </div>
 
       <!-- third  portfolio -->
-      <div class="my-6 lg:my-0 mt-6 md:mb-0 mb-24" ref="targetEl_thirdInfo">
+      <div
+        class="my-6 lg:my-0 mt-6 md:mb-0 mb-24 z-50"
+        ref="targetEl_thirdInfo"
+      >
         <div class="relative left-0 md:left-14 lg:left-14 xl:left-24">
           <div class="flex justify-start">
             <h4 class="font-poppins text-gray text-xl font-semibold">
@@ -308,6 +319,7 @@ useMotion(targetEl_fifthInfo, {
         href="https://olivia-rodrigo-site-cloned.vercel.app/"
         target="_blank"
         class="row-start-5 md:row-start-auto"
+        v-motion-fade-visible
       >
         <img
           :src="ORSiteImg"
@@ -317,7 +329,11 @@ useMotion(targetEl_fifthInfo, {
       </a>
 
       <!-- fourth portfolio -->
-      <a href="https://tala-beta.vercel.app/" target="_blank">
+      <a
+        href="https://tala-beta.vercel.app/"
+        target="_blank"
+        v-motion-fade-visible
+      >
         <img
           :src="TpSiteImg"
           alt="TaskPlace banner screen capture  "
@@ -392,7 +408,7 @@ useMotion(targetEl_fifthInfo, {
       </div>
 
       <!-- fifth portfolio -->
-      <div class="my-6 lg:my-0" ref="targetEl_fifthInfo">
+      <div class="my-6 lg:my-0 z-50" ref="targetEl_fifthInfo">
         <div class="relative left-0 md:left-14 lg:left-14 xl:left-24">
           <div class="flex justify-start">
             <h4 class="font-poppins text-gray text-xl font-semibold">
@@ -458,6 +474,7 @@ useMotion(targetEl_fifthInfo, {
         href="https://icc-tmc-branch-2022-edmarktuazon.vercel.app/"
         target="_blank"
         class="row-start-[9] md:row-start-auto"
+        v-motion-fade-visible
       >
         <img :src="IccImg" alt="ICC banner screen capture  " class="w-full" />
       </a>
