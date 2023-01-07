@@ -101,7 +101,10 @@ useMotion(targetEl_fifthInfo, {
       "
     >
       <!-- first portfolio -->
-      <div class="my-6 lg:my-0 md:mb-0 mb-24 z-50" ref="targetEl_firstInfo">
+      <div
+        class="my-6 lg:my-0 md:mb-0 mb-24 z-50 row-end-3 md:row-end-auto"
+        ref="targetEl_firstInfo"
+      >
         <div class="relative left-0 md:left-14 lg:left-14 xl:left-24">
           <div class="flex justify-start">
             <h4 class="font-poppins text-gray text-xl font-semibold">
@@ -162,11 +165,7 @@ useMotion(targetEl_fifthInfo, {
         </div>
       </div>
       <div class="folio-captured-img relative">
-        <a
-          href="https://shopweiss.store/finals05/"
-          target="_blank"
-          class="row-start-1 md:row-start-auto"
-        >
+        <a href="https://shopweiss.store/finals05/" target="_blank">
           <img
             :src="ShopweissImg"
             alt="Shopweiss banner screen capture  "
