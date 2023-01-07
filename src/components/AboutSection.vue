@@ -107,17 +107,17 @@ const { frontendSkills } = skillList;
             target="_blank"
             class="
               text-lightGray
-              border border-lightGray
               font-poppins
               p-2
               rounded-lg
               w-52
               mt-8
               text-center
-              hover:bg-backupSecondary hover:text-white
+              hover:bg-lightGray hover:text-white
             "
+            style="border: 1px solid #6c717e"
           >
-            <font-awesome-icon icon="fa-solid fa-file" /> &nbsp; View my resume
+            <font-awesome-icon icon="fa-solid fa-file" /> &nbsp;View my resume
           </a>
         </figure>
         <div class="relative mt-12 lg:mt-0 col-span-1 lg:col-span-2">
@@ -142,11 +142,11 @@ const { frontendSkills } = skillList;
             class="font-poppins text-lightGray my-5 leading-7"
             ref="targetEl_info"
           >
-            A self-taught Software Developer<span class="text-lightBlue">
-              based in Cavite Philippines</span
-            >, that focused on Frontend side of a Web, I'm also able to develop
-            Responsive, Intuitive and User-Friendly Websites using the latest
-            Frontend Technologies.
+            A self-taught Software Developer
+            <span class="text-lightBlue"> based in Cavite Philippines</span>,
+            that focuses on front-end web development. I create Responsive,
+            Intuitive and User-Friendly Websites using the latest Front-end
+            Technologies and strive to achieve what my clients want.
           </p>
           <h3 class="text-2xl font-bold text-gray capitalize">
             my tech stacks:

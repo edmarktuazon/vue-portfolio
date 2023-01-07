@@ -61,7 +61,7 @@ useMotion(targetEl_headings, {
             tracking-wide
           "
         >
-          I' am a Frontend Web Developer
+          Iam a Frontend Web Developer
         </h3>
       </div>
       <div class="mt-16 px-4">
@@ -70,7 +70,7 @@ useMotion(targetEl_headings, {
           <a href="https://www.facebook.com/edmark.io/" target="_blank">
             <FacebookIcon />
           </a>
-          <a href="https://www.instagram.com/edmark.io/" target="_blank">
+          <a href="https://www.instagram.com/edmark.ig/" target="_blank">
             <InstagramIcon />
           </a>
           <a href="https://www.linkedin.com/in/edmarktuazon/" target="_blank">

@@ -79,7 +79,7 @@ useMotion(targetEl_fifthInfo, {
       <h2
         class="text-4xl font-poppins text-gray relative text-center font-bold"
       >
-        Checkout a few of my works
+        Check out a few of my works!
       </h2>
     </div>
     <!-- portfolio section -->
@@ -101,7 +101,7 @@ useMotion(targetEl_fifthInfo, {
       "
     >
       <!-- first portfolio -->
-      <div class="my-6 lg:my-0 md:mb-0 mb-24" ref="targetEl_firstInfo">
+      <div class="my-6 lg:my-0 md:mb-0 mb-24 z-50" ref="targetEl_firstInfo">
         <div class="relative left-0 md:left-14 lg:left-14 xl:left-24">
           <div class="flex justify-start">
             <h4 class="font-poppins text-gray text-xl font-semibold">
@@ -144,9 +144,7 @@ useMotion(targetEl_fifthInfo, {
               </ul>
             </div>
             <!-- divider -->
-            <span
-              class="block content-[''] h-12 w-[1px] bg-backupSecondary"
-            ></span>
+            <span class="block h-20 md:h-12 w-[1px] bg-backupSecondary"></span>
             <!-- date -->
             <div>
               <div class="flex justify-start items-center lg:justify-end">
@@ -163,17 +161,19 @@ useMotion(targetEl_fifthInfo, {
           </div>
         </div>
       </div>
-      <a
-        href="https://shopweiss.store/finals05/"
-        target="_blank"
-        class="row-start-1 md:row-start-auto"
-      >
-        <img
-          :src="ShopweissImg"
-          alt="Shopweiss banner screen capture  "
-          class="w-full"
-        />
-      </a>
+      <div class="folio-captured-img relative">
+        <a
+          href="https://shopweiss.store/finals05/"
+          target="_blank"
+          class="row-start-1 md:row-start-auto"
+        >
+          <img
+            :src="ShopweissImg"
+            alt="Shopweiss banner screen capture  "
+            class="w-full"
+          />
+        </a>
+      </div>
 
       <!-- Second  portfolio -->
       <a href="https://tala-beta.vercel.app/" target="_blank">
@@ -231,9 +231,7 @@ useMotion(targetEl_fifthInfo, {
               </ul>
             </div>
             <!-- divider -->
-            <span
-              class="block content-[''] h-12 w-[1px] bg-backupSecondary"
-            ></span>
+            <span class="block h-20 md:h-12 w-[1px] bg-backupSecondary"></span>
             <!-- date -->
             <div>
               <div class="flex justify-start items-center lg:justify-end">
@@ -290,9 +288,7 @@ useMotion(targetEl_fifthInfo, {
               </ul>
             </div>
             <!-- divider -->
-            <span
-              class="block content-[''] h-12 w-[1px] bg-backupSecondary"
-            ></span>
+            <span class="block h-14 md:h-12 w-[1px] bg-backupSecondary"></span>
             <!-- date -->
             <div>
               <div class="flex justify-start items-center lg:justify-end">
@@ -380,9 +376,7 @@ useMotion(targetEl_fifthInfo, {
               </ul>
             </div>
             <!-- divider -->
-            <span
-              class="block content-[''] h-12 w-[1px] bg-backupSecondary"
-            ></span>
+            <span class="block h-28 md:h-12 w-[1px] bg-backupSecondary"></span>
             <!-- date -->
             <div>
               <div class="flex justify-start items-center lg:justify-end">
@@ -444,9 +438,7 @@ useMotion(targetEl_fifthInfo, {
               </ul>
             </div>
             <!-- divider -->
-            <span
-              class="block content-[''] h-12 w-[1px] bg-backupSecondary"
-            ></span>
+            <span class="block h-20 md:h-12 w-[1px] bg-backupSecondary"></span>
             <!-- date -->
             <div>
               <div class="flex justify-start items-center lg:justify-end">
@@ -473,3 +465,23 @@ useMotion(targetEl_fifthInfo, {
     </div>
   </section>
 </template>
+
+<!-- <style scoped>
+.folio-captured-img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  transition: all 200ms ease-out;
+}
+.folio-captured-img:hover::before,
+.folio-captured-img:focus::before {
+  background: #28292cb6;
+  z-index: 1;
+  cursor: pointer;
+  transition: all 200ms ease-out;
+}
+</style> -->
